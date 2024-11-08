@@ -64,6 +64,8 @@ function createSearchInterface() {
         searchButton.disabled = false;
         statusMessage.style.display = "block";
         statusMessage.textContent = "Knowledge base ready - start your search!";
+        resultsPanel.style.display = "none";
+
         if (statusCheckInterval) {
           clearInterval(statusCheckInterval);
         }
@@ -94,6 +96,7 @@ function createSearchInterface() {
     try {
       buildButton.disabled = true;
       buildButton.textContent = "Building...";
+      resultsPanel.style.display = "none";
 
       const apiUrl = `${SEARCH_ENGINE_API_URL}/build_index_by_url`;
 
@@ -131,6 +134,8 @@ function createSearchInterface() {
   }
 
   async function performSearch() {
+    resultsPanel.style.display = "none";
+
     const searchTerm = input.value;
     if (!searchTerm) {
       resultsPanel.style.display = "block";
