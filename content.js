@@ -4,7 +4,8 @@ function createSearchInterface() {
     return;
   }
 
-  const SEARCH_ENGINE_API_URL = "http://localhost:5009/api";
+  const SEARCH_ENGINE_API_URL = "https://search-engine.shuwen.cloud/api";
+  // const SEARCH_ENGINE_API_URL = "http://localhost:5009/api";
 
   // Create search container
   const container = document.createElement("div");
