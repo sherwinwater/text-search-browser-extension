@@ -58,7 +58,6 @@ function createSearchInterface() {
             }
 
             const statusData = await response.json();
-            console.log(statusData, location.href);
 
             if (statusData?.status === "completed") {
                 buildButton.style.display = "none";
