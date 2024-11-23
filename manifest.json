@@ -1,18 +1,16 @@
 {
     "manifest_version": 3,
-    "name": "Text Search Extension",
+    "name": "Text Search",
     "version": "1.0",
     "description": "Search text using Text index",
     "permissions": [
         "activeTab"
     ],
-    "host_permissions": [
-        "*://*/*"
-    ],
     "content_scripts": [
         {
             "matches": [
-                "<all_urls>"
+                "https://*/*",
+                "http://*/*"
             ],
             "js": [
                 "content.js"
